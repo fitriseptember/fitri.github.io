@@ -1,0 +1,319 @@
+/* Styling Global */
+body {
+    font-family: 'Roboto', sans-serif; /* Mengatur font utama menjadi Roboto */
+    color: #333; /* Warna teks utama */
+    line-height: 1.6; /* Jarak antar baris teks */
+    background-color: #f4f4f9; /* Warna latar belakang halaman */
+}
+
+/* Styling Navbar */
+.navbar {
+    background-color: #333; /* Warna latar belakang navbar */
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important; /* Warna teks navbar dan logo menjadi putih */
+    font-weight: 500; /* Ketebalan teks */
+}
+
+.nav-link:hover {
+    color: #ffc107 !important; /* Warna teks saat hover berubah menjadi kuning */
+    transition: color 0.3s ease-in-out; /* Transisi perubahan warna */
+}
+
+/* Animasi Jiggle untuk Brand */
+@keyframes jiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    75% { transform: rotate(3deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.animated-brand {
+    animation: jiggle 0.5s ease-in-out infinite; /* Durasi animasi jiggle */
+}
+
+/* Bagian Hero */
+.hero {
+    background: url('hero-background.jpg') no-repeat center center/cover; /* Mengatur background hero */
+    min-height: 60vh; /* Tinggi minimum */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Teks berada di tengah */
+}
+
+.hero h1 {
+    font-size: 3rem; /* Ukuran font heading */
+    font-weight: 700; /* Ketebalan teks heading */
+}
+
+.hero p {
+    font-size: 1.5rem; /* Ukuran font paragraf */
+    font-weight: 300; /* Ketebalan teks paragraf */
+    margin-top: 0.5rem; /* Jarak atas paragraf */
+}
+
+.hero img {
+    border: 5px solid #fff; /* Border putih pada gambar */
+}
+
+
+@keyframes wave {
+    0%, 100% {
+        transform: scale(1); /* Ukuran normal */
+    }
+    20% {
+        transform: scale(1.2) rotate(15deg); /* Membesar dan memutar sedikit */
+    }
+    40% {
+        transform: scale(1) rotate(-15deg); /* Kembali ke ukuran normal dan memutar berlawanan */
+    }
+    60% {
+        transform: scale(1.2) rotate(10deg); /* Membesar lagi dan memutar sedikit */
+    }
+    80% {
+        transform: scale(1) rotate(-10deg); /* Kembali ke ukuran normal */
+    }
+}
+
+.animated-emoji {
+    display: inline-block; /* Memungkinkan transformasi berfungsi */
+    animation: wave 1.5s infinite; /* Durasi dan pengulangan animasi */
+}
+
+/* Animasi Box */
+@keyframes boxAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.9); /* Mulai dengan ukuran sedikit lebih kecil */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Berakhir pada ukuran normal */
+    }
+}
+
+/* Animasi Melayang */
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0); /* Posisi awal */
+    }
+    50% {
+        transform: translateY(-10px); /* Bergerak sedikit ke atas */
+    }
+    100% {
+        transform: translateY(0); /* Kembali ke posisi awal */
+    }
+}
+
+.animated-box {
+    animation: boxAnimation 1s ease forwards; /* Animasi kotak */
+    animation-delay: 0.3s; /* Penundaan animasi */
+}
+
+
+
+/* Bagian About */
+#about {
+    padding: 60px 0; /* Padding vertikal */
+    background-color: #f8f9fa; /* Warna latar belakang */
+}
+
+#about h2 {
+    font-size: 2.5rem; /* Ukuran font heading */
+    color: #000000; /* Warna hitam untuk heading */
+    font-weight: 700; /* Ketebalan teks heading */
+    margin-bottom: 20px; /* Jarak bawah heading */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Bayangan halus pada teks */
+}
+
+.about-text {
+    background-color: #ffffff; /* Warna latar belakang putih */
+    border-radius: 10px; /* Sudut melengkung */
+    padding: 30px; /* Padding dalam teks */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+    font-family: 'Georgia', serif; /* Font elegan */
+    line-height: 1.8; /* Jarak antar baris teks */
+    animation: floatAnimation 3s ease-in-out infinite; /* Efek melayang */
+}
+
+#about img {
+    max-width: 300px; /* Ukuran maksimum gambar */
+    border-radius: 50%; /* Gambar berbentuk lingkaran */
+    margin-top: 20px;
+    border: 4px solid #ffffff; /* Border putih */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+    margin-left: 140px; /* Menggeser gambar ke kanan */
+}
+
+/* Bagian Projects */
+#projects {
+    background-color: #fff; /* Warna latar belakang putih */
+    padding: 60px 0; /* Padding vertikal */
+}
+
+#projects h2 {
+    font-size: 2.5rem; /* Ukuran font heading */
+    color: #333; /* Warna teks heading */
+    font-weight: 700; /* Ketebalan teks heading */
+    margin-bottom: 40px; /* Jarak bawah heading */
+    text-align: center; /* Teks di tengah */
+}
+
+/* Styling Card */
+.card {
+    border: none;
+    border-radius: 15px; /* Sudut melengkung */
+    overflow: hidden; /* Konten tidak meluap */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transisi transformasi dan bayangan */
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Diperlukan untuk posisi emoji */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Membesar saat hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Bayangan lebih tebal saat hover */
+}
+
+/* Styling Emoji */
+.emoji {
+    font-size: 1.8rem; /* Ukuran emoji */
+    position: absolute;
+    top: 10px; /* Posisi atas */
+    left: 10px; /* Posisi kiri */
+    animation: bounce 2s infinite alternate; /* Animasi bounce */
+    z-index: 1; /* Membuat emoji tetap di atas */
+}
+
+/* Animasi Bounce */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Styling Button */
+.btn-primary {
+    background-color: #5a67d8; /* Warna latar tombol */
+    border: none; /* Tanpa border */
+    transition: background-color 0.3s ease-in-out; /* Transisi warna */
+}
+
+.btn-primary:hover {
+    background-color: #4c51bf; /* Warna tombol saat hover */
+}
+
+/* Bagian Trusted Clients */
+#trusted-clients {
+    background-color: #f9f9f9; /* Warna latar belakang terang */
+    padding: 60px 0; /* Padding vertikal */
+    position: relative; /* Untuk posisi elemen pseudo */
+    overflow: hidden; /* Tidak ada elemen yang meluap */
+}
+
+#trusted-clients h2 {
+    font-size: 2.5rem; /* Ukuran font heading */
+    font-weight: 700; /* Ketebalan teks heading */
+    margin-bottom: 20px; /* Jarak bawah heading */
+    color: #333; /* Warna teks heading */
+}
+
+#trusted-clients p.lead {
+    font-size: 1.2rem; /* Ukuran font paragraf */
+    color: #666; /* Warna teks paragraf */
+}
+
+/* Logo Klien */
+.client-logo {
+    max-width: 100px; /* Ukuran maksimum logo */
+    opacity: 0.8; /* Opasitas awal */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transisi lembut */
+    background-color: #fff; /* Warna latar belakang logo putih */
+    border-radius: 10px; /* Sudut melengkung logo */
+    padding: 10px; /* Padding logo */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+    animation: fadeIn 0.5s ease forwards; /* Animasi fade-in */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Mulai sedikit di bawah */
+    }
+    to {
+        opacity: 0.8;
+        transform: translateY(0); /* Kembali ke posisi normal */
+    }
+}
+
+.client-logo:hover {
+    opacity: 1; /* Opasitas penuh saat hover */
+    transform: scale(1.1); /* Membesar saat hover */
+}
+
+@media (max-width: 768px) {
+    .client-logo {
+        max-width: 80px; /* Ukuran logo pada layar lebih kecil */
+    }
+}
+
+@media (max-width: 576px) {
+    .client-logo {
+        max-width: 60px; /* Ukuran logo pada layar terkecil */
+    }
+}
+
+/* Gambar dalam Kartu */
+.card-img-top {
+    width: 100%; /* Lebar gambar penuh */
+    height: 200px; /* Tinggi gambar tetap */
+    object-fit: cover; /* Menjaga rasio gambar */
+    border-bottom: 4px solid #ffc107; /* Border bawah gambar */
+}
+
+/* Footer */
+footer {
+    background-color: #333; /* Warna latar belakang footer */
+    color: #fff; /* Warna teks putih */
+    padding: 20px 0; /* Padding footer */
+    margin-top: 40px; /* Margin atas footer */
+}
+
+footer p {
+    margin: 0; /* Margin nol untuk paragraf */
+}
+
+.social-links a {
+    color: #fff; /* Warna tautan sosial media */
+    margin-right: 10px; /* Jarak antar ikon */
+    font-size: 1.2rem; /* Ukuran ikon */
+}
+
+.social-links a:hover {
+    color: #ffc107; /* Warna ikon saat hover */
+    transition: color 0.3s ease-in-out; /* Transisi warna saat hover */
+}
+
+/* Styling Responsif */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem; /* Ukuran font heading hero pada layar kecil */
+    }
+
+    .hero p {
+        font-size: 1.2rem; /* Ukuran font paragraf hero pada layar kecil */
+    }
+
+    #about img {
+        max-width: 150px; /* Ukuran gambar di bagian about pada layar kecil */
+    }
+}
+
+
